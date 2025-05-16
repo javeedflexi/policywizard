@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#00c853',
+                        'dark-bg': '#0e1322',
+                        'dark-card': '#1a2235',
+                        'dark-input': '#141c2e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .policy-content h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .policy-content h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #cad1e1;
+        }
+        .policy-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .policy-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+        .button-hover:hover {
+            transform: translateY(-2px);
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-200 min-h-screen py-8 px-4">
+    <div class="container max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold mb-2 text-white"><span class="text-primary">Privacy Policy</span> Generator</h1>
+            <p class="text-gray-400">Create a professional privacy policy for your website in seconds</p>
+        </div>
+        
+        <!-- Form Card -->
+        <div class="bg-dark-card rounded-xl shadow-xl p-6 mb-8">
+            <form id="policyForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="companyName" class="block text-sm font-medium text-gray-300 mb-1">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="websiteName" class="block text-sm font-medium text-gray-300 mb-1">Website Name</label>
+                        <input type="text" id="websiteName" name="websiteName" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="websiteUrl" class="block text-sm font-medium text-gray-300 mb-1">Website URL</label>
+                        <input type="url" id="websiteUrl" name="websiteUrl" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="country" class="block text-sm font-medium text-gray-300 mb-1">Country Name</label>
+                        <input type="text" id="country" name="country" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                    </div>
+                    
+                    <div>
+                        <label for="state" class="block text-sm font-medium text-gray-300 mb-1">State Name</label>
+                        <input type="text" id="state" name="state" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8">
+                    <button type="submit" class="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark-card transition-all shadow-lg button-hover flex items-center space-x-2">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Generate Privacy Policy</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Output Card -->
+        <div id="policyOutput" class="hidden">
+            <div class="bg-dark-card rounded-xl shadow-xl overflow-hidden mb-8">
+                <div class="flex justify-between items-center p-6 border-b border-gray-700">
+                    <h2 class="text-xl font-semibold text-white">Generated Privacy Policy</h2>
+                    <div class="flex space-x-3">
+                        <button id="copyButton" class="px-4 py-2 bg-dark-input text-gray-300 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all flex items-center space-x-2 button-hover">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 max-h-[80vh] overflow-y-auto">
+                    <div id="policyContent" class="policy-content text-gray-300"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm mt-12">
+            <p>FlexiFunnel | Privacy Policy Generator</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('policyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generatePolicy();
+        });
+
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const policyText = document.getElementById('policyContent').innerText;
+            navigator.clipboard.writeText(policyText).then(() => {
+                const copyButton = document.getElementById('copyButton');
+                copyButton.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+                copyButton.classList.remove('bg-dark-input');
+                copyButton.classList.add('bg-green-600', 'text-white');
+                
+                setTimeout(() => {
+                    copyButton.innerHTML = '<i class="fas fa-copy"></i><span>Copy</span>';
+                    copyButton.classList.remove('bg-green-600', 'text-white');
+                    copyButton.classList.add('bg-dark-input');
+                }, 2000);
+            });
+        });
+
+        function generatePolicy() {
+            const companyName = document.getElementById('companyName').value;
+            const websiteName = document.getElementById('websiteName').value;
+            const websiteUrl = document.getElementById('websiteUrl').value;
+            const email = document.getElementById('email').value;
+            const country = document.getElementById('country').value;
+            const state = document.getElementById('state').value;
+            
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            const policyTemplate = `
+                <h1>Privacy Policy for ${companyName}</h1>
+                
+                <p>Last updated: ${formattedDate}</p>
+                
+                <p>At ${websiteName}, accessible from ${websiteUrl}, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by ${websiteName} and how we use it.</p>
+                
+                <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us through email at ${email}</p>
+                
+                <h2>Information We Collect</h2>
+                
+                <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+                
+                <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+                
+                <h2>How We Use Your Information</h2>
+                
+                <p>We use the information we collect in various ways, including to:</p>
+                
+                <ul>
+                    <li>Provide, operate, and maintain our website</li>
+                    <li>Improve, personalize, and expand our website</li>
+                    <li>Understand and analyze how you use our website</li>
+                    <li>Develop new products, services, features, and functionality</li>
+                    <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes</li>
+                </ul>
+                
+                <h2>Log Files</h2>
+                
+                <p>${websiteName} follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+                
+                <h2>Cookies and Web Beacons</h2>
+                
+                <p>Like any other website, ${websiteName} uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+                
+                <h2>Third-Party Privacy Policies</h2>
+                
+                <p>${websiteName}'s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+                
+                <h2>Children's Information</h2>
+                
+                <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+                
+                <p>${websiteName} does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+                
+                <h2>Changes to This Privacy Policy</h2>
+                
+                <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
+                
+                <h2>Contact Us</h2>
+                
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at ${email}.</p>
+                
+                <p>This privacy policy was created for ${websiteName} by ${companyName}, located in ${state}, ${country}.</p>
+            `;
+            
+            document.getElementById('policyContent').innerHTML = policyTemplate;
+            document.getElementById('policyOutput').classList.remove('hidden');
+            window.scrollTo({
+                top: document.getElementById('policyOutput').offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html> 
