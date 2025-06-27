@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,12 +29,14 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
         .policy-content h1 {
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: white;
         }
+
         .policy-content h2 {
             font-size: 1.4rem;
             font-weight: 600;
@@ -41,83 +44,99 @@
             margin-bottom: 0.75rem;
             color: #cad1e1;
         }
+
         .policy-content p {
             margin-bottom: 1rem;
             line-height: 1.6;
         }
+
         .policy-content ul {
             list-style-type: disc;
             padding-left: 1.5rem;
             margin-bottom: 1rem;
         }
+
         .policy-content li {
             margin-bottom: 0.5rem;
         }
+
         .button-hover:hover {
             transform: translateY(-2px);
             transition: all 0.2s ease-in-out;
         }
     </style>
 </head>
+
 <body class="bg-dark-bg text-gray-200 min-h-screen py-8 px-4">
     <div class="container max-w-4xl mx-auto">
         <!-- Header -->
         <div class="text-center mb-10">
-            <h1 class="text-4xl font-bold mb-2 text-white"><span class="text-primary">Privacy Policy</span> Generator</h1>
+            <h1 class="text-4xl font-bold mb-2 text-white"><span class="text-primary">Privacy Policy</span> Generator
+            </h1>
             <p class="text-gray-400">Create a professional privacy policy for your website in seconds</p>
         </div>
-        
+
         <!-- Form Card -->
         <div class="bg-dark-card rounded-xl shadow-xl p-6 mb-8">
             <form id="policyForm" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label for="companyName" class="block text-sm font-medium text-gray-300 mb-1">Company Name</label>
-                        <input type="text" id="companyName" name="companyName" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                        <label for="companyName" class="block text-sm font-medium text-gray-300 mb-1">Company
+                            Name</label>
+                        <input type="text" id="companyName" name="companyName" required
+                            class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
                     </div>
-                    
+
                     <div>
-                        <label for="websiteName" class="block text-sm font-medium text-gray-300 mb-1">Website Name</label>
-                        <input type="text" id="websiteName" name="websiteName" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                        <label for="websiteName" class="block text-sm font-medium text-gray-300 mb-1">Website
+                            Name</label>
+                        <input type="text" id="websiteName" name="websiteName" required
+                            class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
                     </div>
-                    
+
                     <div>
                         <label for="websiteUrl" class="block text-sm font-medium text-gray-300 mb-1">Website URL</label>
-                        <input type="url" id="websiteUrl" name="websiteUrl" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                        <input type="url" id="websiteUrl" name="websiteUrl" required
+                            class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
                     </div>
-                    
+
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
                     </div>
-                    
+
                     <div>
                         <label for="country" class="block text-sm font-medium text-gray-300 mb-1">Country Name</label>
-                        <input type="text" id="country" name="country" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                        <input type="text" id="country" name="country" required
+                            class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
                     </div>
-                    
+
                     <div>
                         <label for="state" class="block text-sm font-medium text-gray-300 mb-1">State Name</label>
-                        <input type="text" id="state" name="state" required class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
+                        <input type="text" id="state" name="state" required
+                            class="w-full px-4 py-3 bg-dark-input border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white transition-all">
                     </div>
                 </div>
-                
+
                 <div class="flex justify-center mt-8">
-                    <button type="submit" class="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark-card transition-all shadow-lg button-hover flex items-center space-x-2">
+                    <button type="submit"
+                        class="px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark-card transition-all shadow-lg button-hover flex items-center space-x-2">
                         <i class="fas fa-file-alt"></i>
                         <span>Generate Privacy Policy</span>
                     </button>
                 </div>
             </form>
         </div>
-        
+
         <!-- Output Card -->
         <div id="policyOutput" class="hidden">
             <div class="bg-dark-card rounded-xl shadow-xl overflow-hidden mb-8">
                 <div class="flex justify-between items-center p-6 border-b border-gray-700">
                     <h2 class="text-xl font-semibold text-white">Generated Privacy Policy</h2>
                     <div class="flex space-x-3">
-                        <button id="copyButton" class="px-4 py-2 bg-dark-input text-gray-300 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all flex items-center space-x-2 button-hover">
+                        <button id="copyButton"
+                            class="px-4 py-2 bg-dark-input text-gray-300 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all flex items-center space-x-2 button-hover">
                             <i class="fas fa-copy"></i>
                             <span>Copy</span>
                         </button>
@@ -128,27 +147,29 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Footer -->
         <div class="text-center text-gray-500 text-sm mt-12">
-            <p>FlexiFunnel | Privacy Policy Generator</p>
+            <p>Powered By <a href="https://flexifunnels.com" target="_blank" rel="noopener noreferrer"
+                    className="hover:underline" style="color: white;">FlexiFunnels.</a> All rights reserved.</p>
+            <p>Build Websites, Funnels & Courses Without Coding... Using AI</p>
         </div>
     </div>
 
     <script>
-        document.getElementById('policyForm').addEventListener('submit', function(e) {
+        document.getElementById('policyForm').addEventListener('submit', function (e) {
             e.preventDefault();
             generatePolicy();
         });
 
-        document.getElementById('copyButton').addEventListener('click', function() {
+        document.getElementById('copyButton').addEventListener('click', function () {
             const policyText = document.getElementById('policyContent').innerText;
             navigator.clipboard.writeText(policyText).then(() => {
                 const copyButton = document.getElementById('copyButton');
                 copyButton.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
                 copyButton.classList.remove('bg-dark-input');
                 copyButton.classList.add('bg-green-600', 'text-white');
-                
+
                 setTimeout(() => {
                     copyButton.innerHTML = '<i class="fas fa-copy"></i><span>Copy</span>';
                     copyButton.classList.remove('bg-green-600', 'text-white');
@@ -164,7 +185,7 @@
             const email = document.getElementById('email').value;
             const country = document.getElementById('country').value;
             const state = document.getElementById('state').value;
-            
+
             const currentDate = new Date();
             const formattedDate = currentDate.toLocaleDateString('en-US', {
                 year: 'numeric',
@@ -227,7 +248,7 @@
                 
                 <p>This privacy policy was created for ${websiteName} by ${companyName}, located in ${state}, ${country}.</p>
             `;
-            
+
             document.getElementById('policyContent').innerHTML = policyTemplate;
             document.getElementById('policyOutput').classList.remove('hidden');
             window.scrollTo({
@@ -237,4 +258,5 @@
         }
     </script>
 </body>
-</html> 
+
+</html>
